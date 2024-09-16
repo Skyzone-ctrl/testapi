@@ -45,6 +45,10 @@ app.post('/upload', upload.single('file'), async (req, res) => {
   }
 });
 
+app.get('/upload_test.html', (req, res) => {
+  res.sendFile(__dirname + '/upload_test.html');
+});
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
